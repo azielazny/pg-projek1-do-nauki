@@ -30,11 +30,11 @@ Jeśli będzie czas to ogarniemy angulara na dalszym etapie projektu.
 w materiałach, które wrzucałem.**
 
 ###Najważniejsze zasady w tym projekcie:
-0. Na slacku wyślijcie mi swoje loginy z githuba, abym was dodał do rojektu. Wtedy będziecie mogli 
-klonować projekt. W przeciwnym razie będziecie musieli użyć forka.
+0. Na slacku wyślijcie mi swoje loginy z githuba, abym was dodał do projektu. Wtedy będziecie mogli 
+klonować projekt i mergować zmiany. W przeciwnym razie będziecie musieli użyć forka i prosić o zatwierdzenie projektu.
 
 1. sklonuj ten projekt i staraj się odświeżać ten projekt, aby mieć aktualną wersję. 
-Przycisk clone or download
+Przycisk clone or download. Jak będzie gotowy projekt trzeba będzie go zainstalować i zbudować.
 ```
 git init
 git clone...
@@ -46,26 +46,37 @@ grunt build
 Powinieneś mieć gałęzie:
 master (gałąź gotowa do umieszczenia na serwerze)
 develop (gałąź deweloperska zaraz przed wydaniem) 
-feauture-(dowolna nazwa na której pracujesz-to dla twoich zadań)
+feature-(dowolna nazwa na której pracujesz-to dla twoich zadań)
 
 Do wdrożenia pełnego GIT Flow brakuje gałęzi release i hotfix, ale do tego dojdziemy. Przy omawianiu SCRUMa 
-trochę zmodyfikujemy gałęzie i zadania.
+trochę zmodyfikujemy gałęzie i zadania. Podobnie, jak do boardów
 
 ```
 git branch...
 ```
 **W skrócie:**
 Najważniejsza jest gałąź develop. Ona musi być aktualna (aktualizacja GIT PULL w miarę często).
-Z tej gałęzi tworzysz gałąź faeuture-(może być twoja nazwa związana z zadaniem). 
-Jak skończysz pracę nad zadaniem mergujesz swoją gałąź z developem i wysyłasz swoją gałąź na github 
-Na stronie github klikasz Pull Requests zgłaszając konieczność scalenia Twojej gałęzi z developem.
+-Z tej gałęzi tworzysz gałąź faeture-(może być twoja nazwa związana z zadaniem). 
+-Jak skończysz pracę nad jakimś etapem zadania(lub coś robisz) wysyłasz swoją wersję na GITHUB i prosisz(albo nie) o ocenę osoby z projektu wysyłając PULL REQUESTA. Swoją pracę oznaczasz etykietami.
+UWAGA! Nie mergujemy zapytania (Nie dotykasz mergre pull request). 
+(rzeczy umowne) 
+Dodałem etykiety(LABELS):
+```
+FEATURE-oznacza zadanie do zrobienia
+Proposal - jeśli macie jakąś propozycję modyfikacji tego, nad czym pracujecie
+Need:code review - gdy skończycie i chcecie zatwierdzenia zmian
+HELP WANTED-gdy potrzebna pomoc i dodajcie od razu w czym: CSS,HTML,JS
+```
+-Po wysłaniu ostatniej wersji kodu dodajecie prośbę o code review. Gdy dostaniecie 1-2 opinie pozytywne możecie kliknąć merge pull request z gałęzią develop i można zamknąć zadanie i pull requesta
+UWAGA! Powinno być tak, że pracujecie nad 1-2 zadaniami, więc nikt z was nie powinien mieć więcje jak 1-2 Pull requesty
 
-ISSUES - to zadania do zrobienia oraz miejsce na komentarze i uwagi dotyczące zadań aktualnych i przyszłych.
+ISSUES - to zadania do zrobienia oraz miejsce na komentarze i uwagi dotyczące zadań aktualnych i przyszłych, aby zadanie było jasne dla każdego.
 
+-----część na później START---
 Na stronie **Projects** w menu GITHUB jest projekt o nazwie **frontend**. To są aktualne zadania do wykonania, 
-czyli  boardy, na których będziemy pracować. (osobiście wolałbym narzędzie Trello.com, ale wtedy musielibyście 
-zakładać kolejne konta i połączyć je z GITHUBem) Według mnie boardy w GITHUBie są trochę upośledzone.
-Wybierasz jedno, nad którym będziesz pracować. Przesuwasz na in progress.
+czyli  boardy, na których nie będziemy teraz pracować. (osobiście wolałbym narzędzie Trello.com, ale wtedy musielibyście 
+zakładać kolejne konta i połączyć je z GITHUBem). Temat boardów powróci przy omawianiu scruma
+Wybierasz jedno, nad którym będziesz pracować. Przesuwasz na in progress, a potem na kolejne etapy.
 **Biorąc zadanie musisz wejść w nie i zaznaczyć, że ty je będziesz robić. WAŻNE!**
 
 ```
@@ -76,7 +87,7 @@ in progress - zadania w trakcie robienia przez wybrane osoby
 code review/bug reports- wysłanie kodu do sprawdzenia
 done- zadanie skończone
 ```
-
+-----część na później END---
 
 UWAGA!Zadanie może się składać z kilku etapów, więc czasem warto sobie stworzyć lokalnie gałąź o nazwie 
 zadania(lub story). Potem od tego zrobić mniejszy feauture i po skończeniu scalić z gałęzią zadania. 
@@ -87,24 +98,34 @@ Jednym z pierwszych zadań będzie skonfigurowanie środowiska do pracy. Przygot
 zadania. GIT logiem lub w GITHUBie może sprawdzić postęp. To już jest zrobione.
 Katalog data zawiera pociętą grafikę i screeny. 
 
-Kolejnymi zadaniami musimy się podzielić. Na początek, ko pierwszy ten lepszy:)
+Kolejnymi zadaniami musimy się podzielić. Na początek, kto pierwszy ten lepszy:)
 
 ###Uwagi końcowe
-W normalnej pracy musicie określać czas pracy nad poszczególnymi zadaniami i ustalać priorytety zadań. 
-Do tego jeszcze dojdziemy.
+W normalnej pracy musicie określać czas pracy nad poszczególnymi zadaniami i ustalać priorytety zadań. Warto 
+już teraz nad tym pomyśleć i mierzyć czas wykonywanych zadań. SCRUM
 
-Teraz jedno jest istotne. Commitujcie jak najczęściej projekt. Jak macie pytania to dodawajcie etykiety 
-i opisy problemów przy zadaniach. Każdy problem w kodzie można zespołowo łatwiej rozwiązać.
+Teraz jedno jest istotne. Commitujcie jak najczęściej projekt i zakładajcie pull requesty. Jak macie pytania 
+to dodawajcie etykiety i opisy problemów przy nich. Każdy problem w kodzie można zespołowo łatwiej rozwiązać.
 
-Na koniec uwaga. Mierzcie czas pracy nad poszczególnymi zadaniami.
+Ja proponuję taki układ pull requesta, jeśli są problemy:
+```
+W tytule podawajcie numer zadania np. #9
+PYTANIE
+ opis zagadnienia
+NASTĘPNE KROKI
+ co chcę robić
+OPINIA
+ dlaczego tak?
+```
+Ważne!
 ```
 Stosujemy zasadę. Jak nie wiecie co zrobić przez 15 minut to szukamy pomocy. Albo Slack, albo komentarz 
-do zadania z etykietą zieloną "HELP WANTED"
+do pull requesta z etykietą zieloną "HELP WANTED"
 ```
 Specjalnie nie robię listy rzeczy do zrobienia na zasadzie kliknij tutaj, zrób to. Zadania mają być na 
 tyle dobrze zdefiniowane, abyście sami byli w zakresie określić zakres prac do wykonia. Odpowiedzi na 
-większość pytań znajdziecie w materiałach, które już były.
+większość pytań znajdziecie w materiałach, które już były lub możecie dopytać przy zadaniu lub w pull request z numerem zadania np #3.
 
 Tylko przez praktykę można zrozumieć pewne zagadnienia.
 
-
+WIKI może też dodamy, ale to jest prosty projekt.
