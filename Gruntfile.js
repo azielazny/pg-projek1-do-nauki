@@ -39,9 +39,13 @@ module.exports = function (grunt) {
                     compass: true,
                     quiet: true
                 },
-                files: {
-                    'public/css/style.css': 'assets/sass/styles.scss'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'assets/sass',
+                    src: ['*.scss'],
+                    dest: 'public/css',
+                    ext: '.css'
+                }]
             }
         },
         copy: {
