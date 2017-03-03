@@ -4,11 +4,34 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-mustache-render');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
     grunt.initConfig({
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'public/css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'public/css',
+                    ext: '.min.css'
+                }]
+            }
+        },
+        //minifikacja html
+        minifyHtml: {
+            options: {
+                cdata: true
+            },
+            dist: {
+                files: {
+                    'dist/index.html': 'src/index.html'
+                }
+            }
+        },
         // templates support
         sass: {
             dist: {
@@ -67,5 +90,7 @@ module.exports = function (grunt) {
     grunt.registerTask('copyfiles', ['copy']);
     grunt.registerTask('images', ['imagemin']);
     grunt.registerTask('templates', ['mustache_render']);
+    grunt.registerTask('htmlminify', ['minifyHtml']);
+    grunt.registerTask('cssminify', ['cssmin']);
     grunt.registerTask('build', ['clean', 'sass', 'copy', 'imagemin', 'mustache_render']);
 };
