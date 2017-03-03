@@ -1,0 +1,25 @@
+{
+  "name": "pg-projek1-do-nauki",
+  "version": "0.0.1",
+  "description": "pg-projek1-do-nauki",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azielazny/pg-projek1-do-nauki.git"
+  },
+  "author": "Arkadiusz Zielazny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azielazny/pg-projek1-do-nauki/issues"
+  },
+  "homepage": "https://github.com/azielazny/pg-projek1-do-nauki#readme",
+  "devDependencies": {
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-mustache-render": "^1.9.2"
+  }
+}
