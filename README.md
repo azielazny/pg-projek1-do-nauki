@@ -128,4 +128,8 @@ większość pytań znajdziecie w materiałach, które już były lub możecie d
 
 Tylko przez praktykę można zrozumieć pewne zagadnienia.
 
-WIKI może też dodamy, ale to jest prosty projekt.
+Małe WIKI jest dodane
+
+##Małe ale jako uwaga na marginesie
+
+**Wgrałem 2 branche stworzone lokalnie na kompie CUT-GRAPHICS i FILES-STRUCTURE. Powinienem najpierw u siebie połączyć te gałęzie i wgrać DEVELOPA do repo na githubie. Mniej gałęzi byłoby w repo. Poza tym już pewnie sam bym rozwiązał kilka problemów, jakbym miał konflikty z developem. Branche lokalne wgrywa się często jak ma się problem do wglądu dla innych, ale to też zależy od firmy i zasad ustalonych w projekcie. Później dobrze jest czyścić zawartość**
