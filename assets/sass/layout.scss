@@ -1,4 +1,189 @@
-nav,
-#about__logo{
-  background: url(../../sources/images/about-slider.jpg) fixed;
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
 }
+
+* {
+  font-family: Arial, Helvetica sans-serif;
+}
+
+nav,
+#about__logo {
+  background: url(../../sources/images/about-slider.jpg) no-repeat;
+}
+
+nav {
+  ul#socials {
+    li {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-color: lightgray;
+      display: inline-block;
+      padding: 10px;
+
+      &:nth-child(3) a {
+        position: relative;
+        bottom: 6px;
+        left: 2px;
+      }
+      a {
+        position: relative;
+        top: 4px;
+        left: 7px;
+
+
+      }
+    }
+  }
+  ul#menu{
+    li{
+      text-transform: uppercase;
+      a{
+
+      }
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+#about__weare {
+  .container {
+    padding: 0 10%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#about__questions {
+
+  h3 {
+    color: #baa875;
+  }
+}
+
+#about__questions {
+
+  h1 {
+    font-size: 4.25rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin-top: 1rem;
+  }
+
+  .column {
+    padding: 0 10%;
+  }
+}
+
+footer {
+  background-color: #070707;
+  color: #ffffff;
+  min-height: 40vh;
+  max-height: 240vh;
+
+  .row {
+
+    .footer__block {
+      padding: 3% 10%;
+    }
+  }
+
+  h2 {
+    color: #baa875;
+    text-transform: uppercase;
+    font-size: 4.25rem;
+  }
+
+  p {
+    font-size: 2.5rem;
+    display: inline-flex;
+  }
+
+  i {
+    display: inline-flex;
+    margin: 10px 20px 10px 0;
+  }
+
+  .support {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+
+    a {
+      margin: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  input {
+    background-color: #070707;
+    padding: 24px 18px 17px 18px;
+    font-size: 2.5rem;
+    border: 1px solid darkgray;
+    color: #ffffff;
+    min-width: 60%;
+  }
+
+  button {
+    background-color: darkgray;
+    width: 150px;
+    padding: 10px 0;
+    margin: 10px;
+    border: 0;
+  }
+
+  .bottom {
+    justify-content: space-between;
+    text-align: center;
+
+    p {
+      color: darkgray;
+
+      &:first-of-type {
+        text-transform: uppercase;
+      }
+
+      span {
+        color: dimgray;
+      }
+    }
+
+    ul {
+
+      li {
+        display: inline-block;
+        background: darkgray;
+        border-radius: 50%;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        margin: 0 1rem;
+
+        &:nth-child(3) a {
+          position: relative;
+          bottom: 6px;
+          left: 4px;
+        }
+
+        a {
+          position: relative;
+          bottom: 4px;
+          left: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+
