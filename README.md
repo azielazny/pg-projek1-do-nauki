@@ -133,3 +133,5 @@ Małe WIKI jest dodane
 ##Małe ale jako uwaga na marginesie
 
 **Wgrałem 2 branche stworzone lokalnie na kompie CUT-GRAPHICS i FILES-STRUCTURE. Powinienem najpierw u siebie połączyć te gałęzie i wgrać DEVELOPA do repo na githubie. Mniej gałęzi byłoby w repo. Poza tym już pewnie sam bym rozwiązał kilka problemów, jakbym miał konflikty z developem. Branche lokalne wgrywa się często jak ma się problem do wglądu dla innych, ale to też zależy od firmy i zasad ustalonych w projekcie. Później dobrze jest czyścić zawartość**
+
+**UWAGA! Czcionka ma się uniwersalnie dopasowywać. Stosujemy standardowe rozmiary dla bootstrapa. Rozmiary podajemy w jednostkach dynamicznych em,rem lub procent. Nie narzucam rozmiarów. (1em=16px) Jak będą gotowe podstrony to wybierzemy sposób prezentacji headera i footera(będzie okazja do dyskusji). Oczywiście czyjaś praca wyleci częściowo z projektu, ale tu chodzi o naukę m.in znaczników HTML5.**
