@@ -28,7 +28,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dist/index.html': 'src/index.html'
+                    'dist/index.html': 'src/index.mustache'
                 }
             }
         },
@@ -51,7 +51,8 @@ module.exports = function (grunt) {
         copy: {
             images: {
                 files: [
-                    {expand: true, cwd: 'source/images', src: '**', dest: 'public/images/'}
+                    {expand: true, cwd: 'sources/images', src: '**', dest: 'public/images/'},
+                {expand: true, cwd: 'assets/css', src: '**', dest: 'public/css/'}
                 ]
             }
         },

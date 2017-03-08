@@ -1,0 +1,42 @@
+//kolory
+$dark-grey:#5f5f5f;
+$light-grey:#a5a5a5;
+$gold:#BFA87D;
+
+//klasa ukrywająca nagłówki html5. Widoczne tylko dla outline
+.offScreen
+{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+header {
+  //ukrycie nagłówka strony, ale zostawienie go dla outline
+  .logo {
+    height: 124px;
+    margin: 0;
+    padding-top: 30px;
+    width: 505px;
+    h1 {
+      background: url("../images/logo-dark.png") no-repeat;
+      display: block;
+      height: 96px;
+      text-indent: -9999em;
+    }
+  }
+  .socialMedia {
+    color:$light-grey;
+    padding:1em;
+    .fa-myCircle {
+      border: 2px solid #a5a5a5;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
