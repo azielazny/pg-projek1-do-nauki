@@ -1,11 +1,10 @@
 //kolory
-$dark-grey:#5f5f5f;
-$light-grey:#a5a5a5;
-$gold:#BFA87D;
+$dark-grey: #5f5f5f;
+$light-grey: #a5a5a5;
+$gold: #BFA87D;
 
 //klasa ukrywająca nagłówki html5. Widoczne tylko dla outline
-.offScreen
-{
+.offScreen {
   position: absolute;
   clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
   clip: rect(1px, 1px, 1px, 1px);
@@ -17,26 +16,243 @@ $gold:#BFA87D;
 }
 
 header {
+  height: 100vh;
+  overflow: hidden;
+  min-height: calc(100vw * 0.495);
+  max-height: calc(100vw * 0.495);
+  border-bottom: 1px solid lighten($light-grey, 20%);
+  .innerHeader {
+    //testowo
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    width: 100%;
+
+  }
+
+  nav {
+    height: 6rem;
+    border-bottom: 1px solid lighten($light-grey, 20%);
+  }
   //ukrycie nagłówka strony, ale zostawienie go dla outline
   .logo {
-    height: 124px;
     margin: 0;
-    padding-top: 30px;
-    width: 505px;
-    h1 {
-      background: url("../images/logo-dark.png") no-repeat;
+    width: 130px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    h3 {
+      background: url("../images/logo-dark.png") 0px 2px no-repeat;
       display: block;
-      height: 96px;
       text-indent: -9999em;
+      text-align: left;
+      margin: 0px;
+
     }
   }
   .socialMedia {
-    color:$light-grey;
-    padding:1em;
+    color: $light-grey;
+    padding-right: 1rem;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     .fa-myCircle {
       border: 2px solid #a5a5a5;
       height: 100%;
       border-radius: 50%;
     }
   }
+  .companyInfo {
+    height: 6rem;
+  }
+  .mainNav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    font-weight: 500;
+    text-align: right;
+    padding: 0rem 1rem;
+    li {
+      line-height: 2.04rem;
+      a {
+        color: $light-grey;
+      }
+      &.active a {
+        color: $dark-grey;
+      }
+    }
+    .list-inline {
+      margin: 0px 0 5px;
+    }
+  }
+
+}
+
+.userLogin {
+  font-weight: 700;
+  color: $light-grey;
+  height: 6rem;
+  text-align: left;
+  p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    margin: auto;
+  }
+
+  span {
+    color: $dark-grey;
+  }
+  img {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    margin: 0rem 0.5rem 0rem 5rem;
+    border: 2px solid $light-grey;
+    border-radius: 50%;
+    height: 80%;
+  }
+}
+
+//slider
+.sliderImg {
+  //width: 100vw;
+  height: calc(100vw * 0.495);
+  width: 100%;
+}
+
+#slider {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-height: calc(100vw * 0.495);
+  max-height: calc(100vw * 0.495);
+}
+
+.sliderContent {
+  position: absolute;
+  bottom: (20/16)*1rem;
+
+  .sliderTitle {
+    font-size: 2.5rem;
+    color: $dark-grey;
+  }
+  .sliderBody {
+    color: darken($light-grey, 20%);
+  }
+  .btnSlider {
+    background: #fff;
+    border-radius: (25/16)*1rem;
+    box-shadow: 0.0625rem 0.125rem 0.3125rem #b8b8b8;
+    padding: 0.3125rem 1.5625rem;
+    display: inline-block;
+    margin: (10/16)*1rem 0rem;
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #5f5f5f;
+      letter-spacing: 0.1em;
+      font-size: (18/16)*1em;
+      &:after {
+        content: ">";
+        margin-left: 1rem;
+      }
+
+    }
+  }
+}
+
+
+@media(max-width: 767px) {
+
+  header {
+    border-bottom: none;
+    .navbar-def {
+      background-color: transparent !important;
+      border-color: transparent !important;
+      .icon-bar {
+        background: $dark-grey;
+      }
+      .navbar-toggle {
+        border: none;
+        background-color: #fff;
+        &:focus, &:hover {
+          background-color: #fff;
+        }
+      }
+
+    }
+    .navBar {
+      background: #fff;
+      margin: 0px -15px;
+      .active {
+        background: #e4e4e4;
+      }
+    }
+    .mainNav {
+      position: relative;
+      top: 0%;
+      transform: none;
+    }
+    .sliderContent {
+      background: rgba(255, 255, 255, 0.7);
+      .sliderTitle {
+        font-size: 1.8rem;
+      }
+      .btnSlider {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+    .userLogin {
+      background: #333;
+      text-align: right;
+      img {
+        margin-left: 10px;
+      }
+      p {
+        padding-right: 10px;
+        span {
+          color: #dcdcdc;
+        }
+
+      }
+    }
+    .list-inline {
+      margin:0 -10px !important;
+      & > li {
+        position: relative;
+        display: block;
+        padding:0px;
+        & > a {
+          display: block;
+          padding: 10px 15px;
+
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .navbar-collapse {
+    float: right;
+    clear: right;
+  }
+}
+
+@media(min-width: 992px) {
+}
+
+@media(min-width: 1200px) {
 }
