@@ -5,7 +5,7 @@ Zaczynamy!
 
 ###Zakres projektu:
 Poruszamy się tylko po tym, co już znacie. Jedyna różnica to narzędzia. Będziemy używać do 
-projektu GITHUBa, może Trello, gdyż warto, abyście już dziś zaczęli budować publiczne portfolio.
+projektu GITHUBa, może Trello.
 
 Przygotowanie strony dla wymyślonej firmy według grafiki wstępnie przygotowanej z tą różnicą, 
 że interesuje nas wersja mobilna i tradycyjna, a mamy tylko grafiki dla dużych ekranów. Poza tym 
@@ -17,16 +17,15 @@ i może coś jeszcze wymyślimy.
 Backendu nie będziemy poruszać. Chyba, że będzie konieczność to dodam kod php, jakąś bazę danych, 
 może cron ale nie przewiduję tego na ten moment. Postaram się to ogarnąć używając JSONa.
 ###Technologia
-Cały projekt ma się opierać na **HTML, CSS(SASS), JS+JQUERY, Bootstrap, szablonach mustache**. 
+Cały projekt ma się opierać na **HTML, CSS(SASS), JS+JQUERY, Bootstrap, grunt (później webpack)**. 
 Dane będą dostarczone w formie **JSON**. Komunikacja w panelu i na stronach powinna odbywać się 
-poprzez **AJAX**, aby uniknąć przeładowaywania stron. 
+poprzez **AJAX**, aby uniknąć przeładowaywania stron. Docelowo użyjemy angulara2.
 
 Do układu GRIDowego stosujemy bootstrapa 3 i bibliotekę jquery. O użyciu kolejnych bibliotek będę 
 informował na bieżąco lub będą integrowane z Gruntem.
 
-Jeśli będzie czas to ogarniemy angulara na dalszym etapie projektu.
 
-**Projekt wymaga działającego GIT, NPM, GRUNTa. Opis konfiguracji na windowsie jest na grupie na slacku 
+**Projekt wymaga działającego GIT, NPM, GRUNTa, Ruby. Opis konfiguracji na windowsie jest na grupie na slacku 
 w materiałach, które wrzucałem.**
 
 ###Najważniejsze zasady w tym projekcie:
@@ -55,7 +54,7 @@ trochę zmodyfikujemy gałęzie i zadania. Podobnie, jak do boardów
 git branch...
 ```
 **W skrócie:**
-Najważniejsza jest gałąź develop. Ona musi być aktualna (aktualizacja GIT PULL w miarę często).
+Najważniejsza jest gałąź develop. Ona musi być aktualna (aktualizacja GIT PULL w miarę często- po pracy).
 -Z tej gałęzi tworzysz gałąź faeture-(może być twoja nazwa związana z zadaniem). 
 -Jak skończysz pracę nad jakimś etapem zadania(lub coś robisz) wysyłasz swoją wersję na GITHUB i prosisz(albo nie) o ocenę osoby z projektu wysyłając PULL REQUESTA. Swoją pracę oznaczasz etykietami.
 UWAGA! Nie mergujemy zapytania (Nie dotykasz mergre pull request). 
@@ -73,7 +72,7 @@ UWAGA! Powinno być tak, że pracujecie nad 1-2 zadaniami, więc nikt z was nie 
 ISSUES - to zadania do zrobienia oraz miejsce na komentarze i uwagi dotyczące zadań aktualnych i przyszłych, aby zadanie było jasne dla każdego.
 
 -----część na później START---
-Na stronie **Projects** w menu GITHUB jest projekt o nazwie **frontend**. To są aktualne zadania do wykonania, 
+Na stronie **Projects** w menu GITHUB jest projekt o nazwie **frontend**(przykład nazwy sprintu). To są aktualne zadania do wykonania, 
 czyli  boardy, na których nie będziemy teraz pracować. (osobiście wolałbym narzędzie Trello.com, ale wtedy musielibyście 
 zakładać kolejne konta i połączyć je z GITHUBem). Temat boardów powróci przy omawianiu scruma
 Wybierasz jedno, nad którym będziesz pracować. Przesuwasz na in progress, a potem na kolejne etapy.
@@ -91,32 +90,16 @@ done- zadanie skończone
 
 UWAGA!Zadanie może się składać z kilku etapów, więc czasem warto sobie stworzyć lokalnie gałąź o nazwie 
 zadania(lub story). Potem od tego zrobić mniejszy feauture i po skończeniu scalić z gałęzią zadania. 
-Na końcu wysłać scalone zadanie na serwer.
+Na końcu wysłać scalone zadanie na serwer. Nie uszczegóławiałem jeszcze zadań.
 
 ###Zadania
 Jednym z pierwszych zadań będzie skonfigurowanie środowiska do pracy. Przygotowałem te dane i rozpisałem 
 zadania. GIT logiem lub w GITHUBie może sprawdzić postęp. To już jest zrobione.
 Katalog data zawiera pociętą grafikę i screeny. 
 
-Kolejnymi zadaniami musimy się podzielić. Na początek, kto pierwszy ten lepszy:)
+W przyszłości projekt przebudujemy dodając angulara2.
 
 ###Uwagi końcowe
-W normalnej pracy musicie określać czas pracy nad poszczególnymi zadaniami i ustalać priorytety zadań. Warto 
-już teraz nad tym pomyśleć i mierzyć czas wykonywanych zadań. SCRUM
-
-Teraz jedno jest istotne. Commitujcie jak najczęściej projekt i zakładajcie pull requesty. Jak macie pytania 
-to dodawajcie etykiety i opisy problemów przy nich. Każdy problem w kodzie można zespołowo łatwiej rozwiązać.
-
-Ja proponuję taki układ pull requesta, jeśli są problemy:
-```
-W tytule podawajcie numer zadania np. #9
-PYTANIE
- opis zagadnienia
-NASTĘPNE KROKI
- co chcę robić
-OPINIA
- dlaczego tak?
-```
 Ważne!
 ```
 Stosujemy zasadę. Jak nie wiecie co zrobić przez 15 minut to szukamy pomocy. Albo Slack, albo komentarz 
@@ -132,6 +115,6 @@ Małe WIKI jest dodane
 
 ##Małe ale jako uwaga na marginesie
 
-**Wgrałem 2 branche stworzone lokalnie na kompie CUT-GRAPHICS i FILES-STRUCTURE. Powinienem najpierw u siebie połączyć te gałęzie i wgrać DEVELOPA do repo na githubie. Mniej gałęzi byłoby w repo. Poza tym już pewnie sam bym rozwiązał kilka problemów, jakbym miał konflikty z developem. Branche lokalne wgrywa się często jak ma się problem do wglądu dla innych, ale to też zależy od firmy i zasad ustalonych w projekcie. Później dobrze jest czyścić zawartość**
+**Wgrałem 2 branche stworzone lokalnie na kompie CUT-GRAPHICS i FILES-STRUCTURE.**
 
-**UWAGA! Czcionka ma się uniwersalnie dopasowywać. Stosujemy standardowe rozmiary dla bootstrapa. Rozmiary podajemy w jednostkach dynamicznych em,rem lub procent. Nie narzucam rozmiarów. (1em=16px) Jak będą gotowe podstrony to wybierzemy sposób prezentacji headera i footera(będzie okazja do dyskusji). Oczywiście czyjaś praca wyleci częściowo z projektu, ale tu chodzi o naukę m.in znaczników HTML5.**
+**UWAGA! Czcionka ma się uniwersalnie dopasowywać. Stosujemy standardowe rozmiary dla bootstrapa. Rozmiary podajemy w jednostkach dynamicznych em,rem lub procent. Nie narzucam rozmiarów. (1em=16px)**
